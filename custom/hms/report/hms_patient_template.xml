@@ -1,0 +1,62 @@
+<odoo>
+
+    <template id="hms_patient_template">
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div style="width:100%;border-top:2px solid black:2px solid black;margin-top:10px">
+                            <span style="color:red;font-size:50px;margin-top:50px;margin-left:100px">Patient Status
+                                Report
+                            </span>
+                            <img t-attf-src="'data:image/*;base64,o.image'"/>
+                        </div>
+                        <div style="margin-top:10px">
+                            <div style="width:45%;display:inline-block;">
+                                FullName:
+                                <p t-field="o.full_name" style="font-size:20px;"/>
+                                Age:
+                                <p t-field="o.age" style="font-size:20px;"/>
+                                Department:
+                                <p t-field="o.department_id" style="font-size:20px;"/>
+                                Doctors
+                                <p t-field="o.doctors_ids" style="font-size:20px;"/>
+                            </div>
+                            <div style="width:45%;display:inline-block;">
+                                Birthday:
+                                <p t-field="o.birthday" style="font-size:20px;"/>
+                                PCR:
+                                <p t-field="o.pcr" style="font-size:20px;"/>
+                                Blood Type:
+                                <p t-field="o.blood_type" style="font-size:20px;"/>
+                                Email:
+                                <p t-field="o.email" style="font-size:20px;"/>
+                            </div>
+                            <div style="width:100%">
+                                <p style="align-center">Log History</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>User</th>
+                                            <th>Date</th>
+                                            <th>Info</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
